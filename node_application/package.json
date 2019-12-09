@@ -1,0 +1,20 @@
+{
+  "name": "testdapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "circular-json": "^0.5.9",
+    "cors": "^2.8.5",
+    "web3": "^1.2.4"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0",
+    "truffle-hdwallet-provider": "^1.0.0-web3one.5"
+  } 
+}
