@@ -17,7 +17,7 @@ app.use(
 //use parser
 app.use(bodyParser.json());
 
-var port = 8000;
+var port = 8545;
 
 app.listen(port, function() {
 	console.log(`App running on ${port}`);
