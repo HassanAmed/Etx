@@ -17,11 +17,12 @@ var defaultAccount = '0x7B6716E46D02f9af0E7b78A90bBCABB2fc52E26F';
 
 var rawTx = {
 	from: defaultAccount,
-	gasPrice: web3.utils.toHex(20 * 1e9),
+	gasPrice: web3.utils.toHex(20 * 1e10),
 	gasLimit: web3.utils.toHex(2100000),
 	to: contractAddress,
-	data: contract.methods.setUser('fhass', 'lname', 'email').encodeABI(),
-	nonce: web3.utils.toHex(100000000),
+	data: contract.methods.setUser('hassan', 'ahmed', 'gmail').encodeABI(),
+	nonce: web3.utils.toHex(1000000),
+	value: '0x00'
 };
 // console.log(rawTx);
 //Sign Tx with your accounts' privkey
@@ -43,7 +44,7 @@ module.exports.setUser = async (fname, lname, email) => {
 				return;
 			}
 			console.log('txHash:', txHash);
-		})
+		}).on("receipt", console.log);
 		// .on('receipt', console.log);
 	// console.log(hash);
 	//res.status(200).send(`transaction hash is ${hash}`);
